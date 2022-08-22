@@ -9,7 +9,7 @@
 <img src="https://user-images.githubusercontent.com/63310859/185806836-3ff2bcb9-1354-4e48-8348-e53cc89b6faa.jpg" height="500"/>
 <br>
 В проектной работе осуществлены запросы, которые отвечают на вопросы (ссылки на файлы .sql):<br>
-<a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/1_qty_airports.sql"> :one: В каких городах больше одного аэропорта?</a><br>
+<a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/1_qty_airports.sql"> :one: Вывести всех неактивных покупателей, все фильмы 2006 года и 10 последних платежей за прокат фильмов?</a><br>
 <a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/2_max_fly_distance.sql"> :two: В каких аэропортах есть рейсы, которые обслуживаются самолетами с максимальной дальностью перелетов?</a><br>
 <a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/3_booking_but_not_fly.sql"> :three: Были ли брони, по которым не совершались перелеты?</a><br>
 <a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/4_fly_procent.sql"> :four: Самолеты каких моделей совершают наибольший % перелетов?</a><br>
