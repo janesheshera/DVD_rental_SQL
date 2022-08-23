@@ -1,4 +1,3 @@
-
 -- Вывести неактивных покупателей:
 select * from customer where active = 0;
 
