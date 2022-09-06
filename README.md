@@ -9,8 +9,12 @@
 <img src="https://user-images.githubusercontent.com/63310859/185806836-3ff2bcb9-1354-4e48-8348-e53cc89b6faa.jpg" height="500"/>
 <br>
 В проектной работе осуществлены следующие запросы (ссылки на файлы .sql):<br>
-<a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_rental.sql"> :one: - Вывести всех неактивных покупателей <br> &ensp;&ensp;&ensp; - фильмы 2006 года <br> &ensp;&ensp;&ensp; - 10 последних платежей за прокат фильмов</a><br>
-<a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/2_max_fly_distance.sql"> :two: - Выведите магазины, имеющие больше 300-от покупателей <br> &ensp;&ensp;&ensp; - у каждого покупателя город, в котором он живет <br> &ensp;&ensp;&ensp; - ФИО сотрудников и города магазинов, имеющих больше 300-от покупателей <br> &ensp;&ensp;&ensp; - количество актеров, снимавшихся в фильмах, которые сдаются в аренду за 2,99</a><br>
+<a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_rental.sql"> Блок :one:</a><br>
+- Вывести всех неактивных покупателей, фильмы 2006 года, 10 последних платежей за прокат фильмов <br>
+<br>
+<a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/2_max_fly_distance.sql"> Блок :two: </a><br>
+- Выведите магазины, имеющие больше 300-от покупателей, у каждого покупателя город, в котором он живет, ФИО сотрудников и города магазинов, имеющих больше 300-от покупателей, количество актеров, снимавшихся в фильмах, которые сдаются в аренду за 2,99<br>
+<br>
 <a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/3_booking_but_not_fly.sql"> :three: - Спроектируйте базу данных</a><br>
 <a href="https://github.com/janesheshera/Air_flights_SQL/blob/main/4_fly_procent.sql"> :four: - Сделайте запрос к таблице rental. Используя оконую функцию добавьте колонку с порядковым номером аренды для каждого пользователя <br> &ensp;&ensp;&ensp; - Для каждого пользователя подсчитайте сколько он брал в аренду фильмов со специальным атрибутом Behind the Scenes </a><br>
 
