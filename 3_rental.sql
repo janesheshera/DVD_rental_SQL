@@ -1,8 +1,8 @@
--- 1. Сделайте запрос к таблице rental. Используя оконную функцию, добавьте колонку с порядковым номером аренды для каждого пользователя (сортировать по rental_date)
+-- 1. РЎРґРµР»Р°Р№С‚Рµ Р·Р°РїСЂРѕСЃ Рє С‚Р°Р±Р»РёС†Рµ rental. РСЃРїРѕР»СЊР·СѓСЏ РѕРєРѕРЅРЅСѓСЋ С„СѓРЅРєС†РёСЋ, РґРѕР±Р°РІСЊС‚Рµ РєРѕР»РѕРЅРєСѓ СЃ РїРѕСЂСЏРґРєРѕРІС‹Рј РЅРѕРјРµСЂРѕРј Р°СЂРµРЅРґС‹ РґР»СЏ РєР°Р¶РґРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ rental_date)
 select customer_id, rental_date, row_number() over(partition by customer_id order by rental_date asc) as rental_number 
 from rental r;
 
--- 2.Для каждого пользователя подсчитайте сколько он брал в аренду фильмов со специальным атрибутом Behind the Scenes
+-- 2.Р”Р»СЏ РєР°Р¶РґРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РїРѕРґСЃС‡РёС‚Р°Р№С‚Рµ СЃРєРѕР»СЊРєРѕ РѕРЅ Р±СЂР°Р» РІ Р°СЂРµРЅРґСѓ С„РёР»СЊРјРѕРІ СЃРѕ СЃРїРµС†РёР°Р»СЊРЅС‹Рј Р°С‚СЂРёР±СѓС‚РѕРј Behind the Scenes
 select r.customer_id, count (rental_id) as qty_rental from rental r
 join inventory i using (inventory_id)
 join film f using (film_id)
@@ -10,7 +10,7 @@ where special_features @> array ['Behind the Scenes']
 group by customer_id
 order by customer_id;
 
--- Создайте материализованное представление с этим запросом
+-- РЎРѕР·РґР°Р№С‚Рµ РјР°С‚РµСЂРёР°Р»РёР·РѕРІР°РЅРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ СЃ СЌС‚РёРј Р·Р°РїСЂРѕСЃРѕРј
 create materialized view rental_BTS as
 select r.customer_id, count (rental_id) as qty_rental from rental r
 join inventory i using (inventory_id)
@@ -20,5 +20,6 @@ group by customer_id
 order by customer_id;
 
 select * from rental_BTS;
--- Обновите материализованное представление
-refresh materialized view rental_BTS
+
+-- РћР±РЅРѕРІРёС‚Рµ РјР°С‚РµСЂРёР°Р»РёР·РѕРІР°РЅРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
+refresh materialized view rental_BTS;
