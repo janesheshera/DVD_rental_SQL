@@ -1,39 +1,76 @@
---Выведите магазины, имеющие больше 300-от покупателей
-select store_id, count(customer_id) as qty_customer from customer c group by store_id
-having count(customer_id) > 300;
+-- РЎРїСЂРѕРµРєС‚РёСЂСѓР№С‚Рµ Р±Р°Р·Сѓ РґР°РЅРЅС‹С… РґР»СЏ СЃР»РµРґСѓСЋС‰РёС… СЃСѓС‰РЅРѕСЃС‚РµР№:
+-- 1. СЏР·С‹Рє (Р°РЅРіР»РёР№СЃРєРёР№, С„СЂР°РЅС†СѓР·СЃРєРёР№ Рё С‚.Рґ.)
 
---Выведите у каждого покупателя город, в котором он живет
-select first_name||' '||last_name as customer_name, city from customer c 
-join address a on c.address_id = a.address_id 
-join city c2 on c2.city_id = a.city_id;
+create table language (
+language_id serial PRIMARY KEY,
+name varchar(20) not null unique
+);
 
---Выведите ФИО сотрудников и города магазинов, имеющих больше 300-от покупателей
-select s.store_id, s2.first_name, s2.last_name, city from store s
-join staff s2 on s.store_id =s2.store_id 
-join address a on s2.address_id = a.address_id 
-join city c2 on c2.city_id =a.city_id
-where s.store_id = (select store_id from customer c group by store_id
-having count(customer_id) > 300)
+insert into language (name)
+values
+('РђРЅРіР»РёР№cРєРёР№ СЏР·С‹Рє'),
+('Р¤СЂР°РЅС†СѓР·СЃРєРёР№ СЏР·С‹Рє'),
+('РќРµРјРµС†РєРёР№ СЏР·С‹Рє'),
+('РЁРІРµРґСЃРєРёР№ СЏР·С‹Рє'),
+('РљРёС‚Р°Р№СЃРєРёР№ СЏР·С‹Рє');
 
---Выведите количество актеров, снимавшихся в фильмах, которые сдаются в аренду за 2,99
-select title as film_title, count(actor_id) as qty_actors from film f 
-join film_actor fa on f.film_id = fa.film_id 
-where rental_rate = '2.99'
-group by film_title
-order by qty_actors desc 
+-- 2. РЅР°СЂРѕРґРЅРѕСЃС‚СЊ (СЃР»Р°РІСЏРЅРµ, Р°РЅРіР»РѕСЃР°РєСЃС‹ Рё С‚.Рґ.)
+create table nation (
+nation_id serial PRIMARY KEY,
+name varchar(20) not null unique
+);
 
+insert into nation (name)
+values
+('РђРЅРіР»РѕСЃР°РєСЃС‹'),
+('Р¤СЂР°РЅРєРё'),
+('РЎР°РєСЃС‹'),
+('РЁРІРµРґС‹'),
+('Р¤РёРЅРЅС‹'),
+('РҐР°РЅСЊС†С‹'),
+('РЈР№РіСѓСЂС‹');
 
+-- 3. СЃС‚СЂР°РЅС‹ (Р РѕСЃСЃРёСЏ, Р“РµСЂРјР°РЅРёСЏ Рё С‚.Рґ.)
+create table country (
+country_id serial PRIMARY KEY,
+name varchar(20) not null unique
+);
 
+insert into country (name)
+values
+('Р’РµР»РёРєРѕР±СЂРёС‚Р°РЅРёСЏ'),
+('Р¤СЂР°РЅС†РёСЏ'),
+('Р“РµСЂРјР°РЅРёСЏ'),
+('РЁРІРµС†РёСЏ'),
+('РљРёС‚Р°Р№');
 
+create table country_nation (
+country_id int references country(country_id),
+nation_id int references nation(nation_id)
+);
 
+insert into country_nation (country_id, nation_id)
+values
+('1','1'),
+('2','2'),
+('3','3'),
+('4','4'),
+('4','5'),
+('5','6'),
+('5','7');
 
+create table nation_language (
+nation_id int references nation(nation_id),
+language_id int references language(language_id)
+);
 
-
-
-
-
-
-
-
-
-
+insert into nation_language (nation_id, language_id)
+values
+('1','1'),
+('2','2'),
+('3','3'),
+('3','1'),
+('4','4'),
+('5','4'),
+('6','5'),
+('7','5');
