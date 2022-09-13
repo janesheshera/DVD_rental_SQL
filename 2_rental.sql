@@ -44,6 +44,7 @@ values
 ('Швеция'),
 ('Китай');
 
+-- 4. Две таблицы со связями
 create table country_nation (
 country_id int references country(country_id),
 nation_id int references nation(nation_id)
