@@ -17,7 +17,7 @@
 - order by - сортировка <br>
 - преобразование текстовых значений - операторы upper, lower, split_part, left, right <br></h5>
 <details>
-<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_rental.sql"> Блок :one:</a></summary>
+<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_block_rental.sql"> Блок :one:</a></summary>
 1. Вывести уникальные названия городов из таблицы городов.<br>
 2. Вывести города, названия которых начинаются на 'L' и заканчиваются на 'a' и не содержат пробелов.<br>
 3. Получить из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 17 марта 2007 года по 19 марта 2007 года включительно, а также стоимость которых превышает 1.00. Платежи нужно отсортировать по дате.<br>
