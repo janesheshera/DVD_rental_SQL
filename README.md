@@ -41,7 +41,7 @@
 - агрегирующие функции - count, sum, max, min, avg <br>
 - фильтрация для агрегирующих функций - оператор having <br>
 - использовано декартово произведение <br>
-- создан столбец с помощью выражения case</h5>
+- создан столбец с помощью условного выражения case</h5>
 <details>
 <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/2_block_rental.sql"> Блок :two:</a></summary>
 1. Вывести для каждого покупателя его адрес, город и страну проживания. <br>
