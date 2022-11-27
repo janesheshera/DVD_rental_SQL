@@ -40,7 +40,7 @@
 - join (с using) - соединение таблиц <br>
 - агрегирующие функции - count, sum, max, min, avg <br>
 - фильтрация для агрегирующих функций - оператор having <br>
-- использовано декартово произведение <br>
+- применено декартово произведение <br>
 - создан столбец с помощью условного выражения case</h5>
 <details>
 <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/2_block_rental.sql"> Блок :two:</a></summary>
