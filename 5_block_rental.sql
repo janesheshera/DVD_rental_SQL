@@ -122,14 +122,3 @@ order by 3 desc
 limit 2) as qty using (store_id)
 order by 3 asc
 limit 2
-
-
-
-
-
-
-
-
-
-
-
