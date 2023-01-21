@@ -15,7 +15,7 @@
 - distinct - выбор уникальных значений<br>
 - where, limit, like/not like, between и др. - фильтрация числовых, текстовых значений и дат<br>
 - order by - сортировка <br>
-- upper, lower, split_part, left, right - преобразование текстовых значений -  <br></h5>
+- upper, lower, split_part, left, right - преобразование текстовых значений <br></h5>
 <details>
 <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_block_rental.sql"> Блок :one:</a></summary>
 1. Вывести уникальные названия городов из таблицы городов.<br>
