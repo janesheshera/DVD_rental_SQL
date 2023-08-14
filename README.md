@@ -17,7 +17,7 @@
 - order by - сортировка <br>
 - upper, lower, split_part, left, right - преобразование текстовых значений <br></h5>
 <details>
-<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_block_rental.sql"> Блок :one:</a></summary>
+<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/1_block_rental.sql"> Блок 1 </a></summary>
 1. Вывести уникальные названия городов из таблицы городов.<br>
 2. Вывести города, названия которых начинаются на 'L' и заканчиваются на 'a' и не содержат пробелов.<br>
 3. Получить из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 17 марта 2007 года по 19 марта 2007 года включительно, а также стоимость которых превышает 1.00. Платежи нужно отсортировать по дате.<br>
@@ -43,7 +43,7 @@
 - применено декартово произведение <br>
 - создан столбец с помощью условного выражения case</h5>
 <details>
-<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/2_block_rental.sql"> Блок :two:</a></summary>
+<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/2_block_rental.sql"> Блок 2 </a></summary>
 1. Вывести для каждого покупателя его адрес, город и страну проживания. <br>
 2. Посчитать для каждого магазина количество покупателей. Доработать запрос и вывести только те магазины, у которых количество покупателей больше 300. Добавить в запрос информацию о городе магазина, фамилии и имени продавца, который работает в нём. <br>
 3. Вывести топ 5 покупателей, которые взяли в аренду за всё время наибольшее количество фильмов. <br>
@@ -67,7 +67,7 @@
 - unnest(array['']), values () - добавление массива(перечня) значений <br>
 - присвоение типа данных и ограничений по столбцам таблицы <br></h5>
 <details>
-  <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/3_block_rental%20(table).sql"> Блок :three: </a></summary>
+  <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/3_block_rental%20(table).sql"> Блок 3 </a></summary>
 1. Спроектируйте базу данных для следующих сущностей: <br>
 - язык (например: английский, французский и т.д.) <br>
 - народность (например: славяне, англосаксы и т.д.) <br>
@@ -104,7 +104,7 @@
 - lag() over(), lead() over() - оконные функции, выводящие значения со 'сдвигом' по заданному столбцу <br>
 - использованы вложенные запросы </h5>
 <details>
-<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/4_block_rental.sql"> Блок :four: </a></summary>
+<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/4_block_rental.sql"> Блок 4 </a></summary>
 1. С помощью оконных функций добавить вычисляемые колонки согласно условиям:<br>
 - Пронумеровать все платежи от 1 до N по дате<br>
 - Пронумеровать платежи для каждого покупателя, сортировка платежей должна быть по дате<br>
@@ -132,7 +132,7 @@
 - рассчитаны экономические показатели работы магазина <br>
 </h5>
 <details>
-  <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/5_block_rental.sql"> Блок :five: </a></summary>
+  <summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/5_block_rental.sql"> Блок 5 </a></summary>
 1. Вывести всю информацию о фильмах со специальным атрибутом "Behind the Scenes".<br>
 2. Написать еще 2 варианта поиска фильмов с атрибутом "Behind the Scenes", используя другие функции или операторы языка SQL для поиска значения в массиве.<br>
 3. Для каждого покупателя посчитать сколько он брал в аренду фильмов со специальным атрибутом "Behind the Scenes. Условие: использовать запрос из задания 1, помещенный в CTE. <br>
@@ -158,7 +158,7 @@
 - своевременность возврата арендованных фильмов <br>
 </h5>
 <details>
-<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/6_block_rental.sql"> Блок :six: </a></summary>
+<summary><a href="https://github.com/janesheshera/DVD_rental_SQL/blob/main/6_block_rental.sql"> Блок 6 </a></summary>
 1. Рассчитать совокупный доход всех магазинов на каждую дату <br>
 2. Вывести наиболее и наименее востребованные жанры <br>
 3. Рассчитать среднюю арендную ставку для каждого жанра <br>
